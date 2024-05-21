@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Python Data Types Methods Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Python Data Types Methods Cheat Sheet</h1>
+
+    <h2>str Methods</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Problem Statement</th>
+                <th>Code Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>str</td>
+                <td>strip()</td>
+                <td>Removes leading and trailing whitespace characters</td>
+                <td>Remove extra whitespace from user input</td>
+                <td><pre>user_input = input("Enter your name: ").strip()</pre></td>
+            </tr>
+            <tr>
+                <td>str</td>
+                <td>split()</td>
+                <td>Splits a string into a list based on a separator</td>
+                <td>Split a sentence into individual words</td>
+                <td><pre>sentence = "This is a sample sentence."<br>words = sentence.split()</pre></td>
+            </tr>
+            <tr>
+                <td>str</td>
+                <td>join()</td>
+                <td>Joins a list of strings with a separator string</td>
+                <td>Concatenate words into a sentence</td>
+                <td><pre>words = ["This", "is", "a", "sentence."]<br>sentence = " ".join(words)</pre></td>
+            </tr>
+            <tr>
+                <td>str</td>
+                <td>upper()</td>
+                <td>Converts all characters to uppercase</td>
+                <td>Convert a string to uppercase</td>
+                <td><pre>text = "hello"<br>upper_text = text.upper()</pre></td>
+            </tr>
+            <tr>
+                <td>str</td>
+                <td>lower()</td>
+                <td>Converts all characters to lowercase</td>
+                <td>Convert a string to lowercase</td>
+                <td><pre>text = "HELLO"<br>lower_text = text.lower()</pre></td>
+            </tr>
+            <tr>
+                <td>str</td>
+                <td>find()</td>
+                <td>Returns the lowest index of the substring</td>
+                <td>Find the position of a substring</td>
+                <td><pre>text = "hello world"<br>position = text.find("world")</pre></td>
+            </tr>
+            <tr>
+                <td>str</td>
+                <td>replace()</td>
+                <td>Replaces occurrences of a substring</td>
+                <td>Replace a substring with another</td>
+                <td><pre>text = "hello world"<br>new_text = text.replace("world", "there")</pre></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>int Methods</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Problem Statement</th>
+                <th>Code Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>int</td>
+                <td>bit_length()</td>
+                <td>Returns the number of bits required to represent the integer in binary</td>
+                <td>Find the bit length of an integer</td>
+                <td><pre>num = 10<br>bits = num.bit_length()</pre></td>
+            </tr>
+            <tr>
+                <td>int</td>
+                <td>to_bytes()</td>
+                <td>Returns an array of bytes representing the integer</td>
+                <td>Convert an integer to a byte array</td>
+                <td><pre>num = 1024<br>byte_array = num.to_bytes(2, byteorder='big')</pre></td>
+            </tr>
+            <tr>
+                <td>int</td>
+                <td>from_bytes()</td>
+                <td>Returns an integer represented by an array of bytes</td>
+                <td>Convert a byte array to an integer</td>
+                <td><pre>byte_array = b'\\x04\\x00'<br>num = int.from_bytes(byte_array, byteorder='big')</pre></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>float Methods</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Problem Statement</th>
+                <th>Code Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>float</td>
+                <td>is_integer()</td>
+                <td>Returns True if the float is an integer</td>
+                <td>Check if a float is an integer</td>
+                <td><pre>num = 10.0<br>result = num.is_integer()</pre></td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td>as_integer_ratio()</td>
+                <td>Returns a pair of integers representing the float</td>
+                <td>Get the integer ratio of a float</td>
+                <td><pre>num = 0.75<br>ratio = num.as_integer_ratio()</pre></td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td>hex()</td>
+                <td>Returns the hexadecimal string representation of the float</td>
+                <td>Get the hexadecimal representation of a float</td>
+                <td><pre>num = 3.14<br>hex_str = num.hex()</pre></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>dict Methods</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Problem Statement</th>
+                <th>Code Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>dict</td>
+                <td>keys()</td>
+                <td>Returns a new view of the dictionary's keys</td>
+                <td>Get all keys in a dictionary</td>
+                <td><pre>my_dict = {"a": 1, "b": 2}<br>keys = my_dict.keys()</pre></td>
+            </tr>
+            <tr>
+                <td>dict</td>
+                <td>values()</td>
+                <td>Returns a new view of the dictionary's values</td>
+                <td>Get all values in a dictionary</td>
+                <td><pre>my_dict = {"a": 1, "b": 2}<br>values = my_dict.values()</pre></td>
+            </tr>
+            <tr>
+                <td>dict</td>
+                <td>items()</td>
+                <td>Returns a new view of the dictionary's key-value pairs</td>
+                <td>Get all key-value pairs in a dictionary</td>
+                <td><pre>my_dict = {"a": 1, "b": 2}<br>items = my_dict.items()</pre></td>
+            </tr>
+            <tr>
+                <td>dict</td>
+                <td>get()</td>
+                <td>Returns the value for the specified key if the key is in the dictionary</td>
+                <td>Get the value for a key with a default if the key does not exist</td>
+                <td><pre>my_dict = {"a": 1, "b": 2}<br>value = my_dict.get("a", 0)</pre></td>
+            </tr>
+            <tr>
+                <td>dict</td>
+                <td>pop()</td>
